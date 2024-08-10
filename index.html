@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+Credit to 𝘉𝘭𝘶𝘦𝘣𝘪𝘳𝘥 for the thumbnail. 
+Credit to the website Simply Coding, for their course on 3D, of which I used snippets of code from.
+-->
+<html>
+<head>
+<title>Sphere</title>
+<meta charset="utf-8"/>
+
+<!--Import the font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="stylez.css" type="text/css">
+
+
+<!--Import Babylon.js and Cannon.js-->
+<script src="https://cdn.jsdelivr.net/npm/babylonjs@6.23.0/babylon.min.js"></script>
+<script src = "https://cdn.jsdelivr.net/npm/cannon@0.6.2/build/cannon.min.js"></script>
+
+<!--All of the non-3D elements-->
+<div id = "lvl-txt" style = "text-align:left; color:black; position:absolute; top:86%; left:10px; font-size:20px;"></div>
+<div id = "time" style = "color:black; position:absolute; top:5px; left:5px;"></div>
+<div id = "menu" style = "position:absolute; left:0px; top:0px; width:100%; height:100%; background-color:rgb(127.5, 204, 127.5); text-align:center;">
+<br>
+<h1 style = "font-size:80px;" id = "min-txt">Sphere</h1>
+<h2 style = "position:absolute; left:44%; top:160px;" id = "dip-txt">By ▪︎Dipper98▪︎︎</h2>
+<br><br>
+<img src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Sphere_wireframe_10deg_6r.svg/1920px-Sphere_wireframe_10deg_6r.svg.png' width = '150' id = 'sphere-img' style = 'position:absolute; left:45%; top:33%;'>
+<h2 style = "display:none;" id = "led-txt">1. ▪︎Dipper98▪ --- 116<br>2. Could be you!<br>3. Could be you!︎︎</h2>
+<h2 style = "display:none;" id = "how-txt">Instructions explained in-game, try to complete the game as quick as you can to get on the leaderboard! Oh, and don't forget to have fun!︎︎</h2>
+<button style = "left:45%; top:450px; width:150px; height:70px; font-size:35px;" id = 'ply-btn'>Play</button>
+<button style = "left:20%; top:450px; width:150px; height:70px; font-size:35px;" id = 'led-btn'>Lead</button>
+<button style = "left:70%; top:450px; width:150px; height:70px; font-size:35px;" id = 'lev-btn'>How</button>
+<button style = "left:45%; top:450px; width:150px; height:70px; font-size:35px; display:none;" id = 'bck-btn'>Back</button>
+</div>
+ 
+<script src = 'game.js'></script>
+
+</head>
+<body onload = "run()">
+    <canvas id = "renderCanvas"></canvas>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script><script type>var r=600;var s=document.documentElement.clientWidth;window.parent.html2canvas=e=>{try{html2canvas(document.body,{width:s,height:s,useCORS:true,}).then(e=>{var c=document.createElement("canvas");c.width=r;c.height=r;c.getContext('2d').drawImage(e,0,0,e.width,e.height,0,0,r,r);window.top.postMessage(c.toDataURL(),"*");}).catch(e=>{alert("Thumbnail Script Error: "+e);});}catch{window.top.postMessage(document.createElement("canvas").toDataURL(),"*");}};</script>
+</html>
